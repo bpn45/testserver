@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03.03.2015 11:57:36 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db.SrvConfig" table="srvconfig" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="source" type="string">
+            <column name="source" length="120">
+                <comment>Source path of xml files</comment>
+            </column>
+        </property>
+        <property name="destination" type="string">
+            <column name="destination" length="120">
+                <comment>Path to moving extracted files</comment>
+            </column>
+        </property>
+        <property name="delay" type="java.lang.Integer">
+            <column name="delay">
+                <comment>Delay time in sec</comment>
+            </column>
+        </property>
+        <property name="wrong" type="string">
+            <column name="wrong" length="120">
+                <comment>Path to wrong files</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
